@@ -20,19 +20,19 @@ export class AuthService {
   }
 
   loggedIn() {
-    return !!localStorage.getItem('token');
+    return !!localStorage.getItem('accessToken');
   }
 
   getToken() {
     return localStorage.getItem('accessToken');
   }
 
-  register(formData : any) {
-    return this.http.post(this.authUrl + '/register', formData);
+  register(data : any) {
+    return this.http.post(this.authUrl + '/register', data);
   }
 
   registerCometChat(data : any) {
-    return this.http.post('https://api-us.cometchat.io/v2.0/users', data, {headers: {appId: '3252038b2900b26', apiKey: 'fa74f7453b417fac8888a553be226ba7d24560a7' }});
+    return this.http.post('https://api-us.cometchat.io/v2.0/users', data, {headers: {appId: '33172a66e955908', apiKey: '5dbdcbadee585287a125ccd4af89740d0240178e' }});
   }
 
   loginCometChat(uid : any) {

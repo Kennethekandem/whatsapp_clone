@@ -11,6 +11,8 @@
               <input
                 type="tel"
                 class="form-control"
+                [(ngModel)]="loginData.phone"
+                name="phone"
                 id="floatingInput"
                 placeholder="+234"
               />
@@ -19,6 +21,8 @@
             <div class="form-floating">
               <input
                 type="password"
+                [(ngModel)]="loginData.password"
+                name="password"
                 class="form-control"
                 id="floatingPassword"
                 placeholder="Password"
