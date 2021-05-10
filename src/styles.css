@@ -1,4 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 .bg {
   background-color: #1ebea5 !important;
+  height: 100vh;
+}
+.btn-primary {
+  background-color: #1ebea5;
+}
+.btn {
+  border: 1px solid #1ebea5;
+}
+.btn:hover {
+  background-color: #1cab94;
+  border: 1px solid #1cab94;
 }
