@@ -23,6 +23,11 @@
   font-size: 1.7rem;
   border-radius: 0.3rem;
 }
+.login-img {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 @media screen and (max-width: 415px) {
   .card {
