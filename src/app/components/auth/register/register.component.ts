@@ -25,19 +25,19 @@ export class RegisterComponent implements OnInit {
     .register(this.registerData)
     .subscribe((response : any) => {
 
-      this.user = response.data._doc;
+      this.user = response.data;
       this.getUser();
       localStorage.setItem('accessToken', response.data.accessToken);
 
-      const uid = response.data._doc.name.replace(/\s/g, '');
-      this.cometLogin(uid)
+      const uid = response.data.username.replace(/\s/g, '');
+      this.registerComet();
 
     })
   }
 
    registerComet() {
       let user = JSON.parse(localStorage.getItem('user'));
-      let name = user.name;
+      let name = user.username;
       let uid = name.replace(/\s/g, '')
       let data = {uid, name};
 
@@ -57,7 +57,7 @@ export class RegisterComponent implements OnInit {
         CometChat.login(uid, authKey).then(
             (user) => {
                 console.log("Login Successful:", { user });
-                this.router.navigate(["/home"]);
+                this.router.navigate(["/"]);
             },
             (error) => {
                 console.log("Login failed with exception:", { error });

@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       this.getUser();
       localStorage.setItem('accessToken', response.data.accessToken);
 
-      const uid = response.data._doc.name.replace(/\s/g, '');
+      const uid = response.data._doc.username.replace(/\s/g, '');
       this.cometLogin(uid)
       
     }, error => {
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
   }
 
   getUser() {
-        localStorage.setItem('user', JSON.stringify(this.user));
+    localStorage.setItem('user', JSON.stringify(this.user));
   }
 
   cometLogin(uid) {
