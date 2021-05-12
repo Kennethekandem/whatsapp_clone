@@ -44,12 +44,12 @@ export class LoginComponent implements OnInit {
   }
 
   cometLogin(uid) {
-        const authKey = "cdf0cba5238483562e204a0fe165724b974b2b13";
+        const authKey = "6b5febba19a5805e4056a57d2054ba743a86b475";
 
         CometChat.login(uid, authKey).then(
             (user) => {
                 console.log("Login Successful:", { user });
-                this.router.navigate(["/home"]);
+                this.router.navigate(["/"]);
             },
             (error) => {
                 console.log("Login failed with exception:", { error });

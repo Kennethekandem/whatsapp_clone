@@ -34,8 +34,4 @@ export class AuthService {
   registerCometChat(data : any) {
     return this.http.post('https://api-us.cometchat.io/v2.0/users', data, {headers: {appId: '33172a66e955908', apiKey: '5dbdcbadee585287a125ccd4af89740d0240178e' }});
   }
-
-  loginCometChat(uid : any) {
-    return this.http.get('https://api-us.cometchat.io/v2.0/users/' + uid);
-  }
 }
